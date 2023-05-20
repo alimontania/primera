@@ -1,53 +1,61 @@
-
-
 *{
     margin: 0;
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+    color: #444;
+}
+.contenido a{
+    width: 19%;
+    margin-right: 0.625%;
+    text-align: center;
+    line-height: 3;
+    color: black;
+}
+
+.contenido li:last-child a {
+    margin-right: 0;
+  }
+  
+  .contenido a:link, a:visited, a:focus {
+    background: antiquewhite;
+  }
+  
+ .contenido a:hover {
+    background:rosybrown;
+  }
+
+li{
+    list-style: none;
+}
+
 body{
-    background-color: beige;
+    background-color: #f1d2b4;
     font-family: 'serif';
 }
 
-
-
-h1.logo{
-    padding: 20px;;
-}
-
-nav{
-    float: right ;
-}
-
-
-header{
-    background-color: antiquewhite;
-    width: 100%;
-    clear: both;
-    content: '';
-    display: table;
-
-}
-
 .menu{
-    width: 900px; ;
-    margin:0 auto ;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background-color:#ef97a3;
 }
+
 nav ul li {
-    list-style: none;
-    margin-left: 75px;
+    margin-left: 30px;  
     padding: 12px;
     float: left;
     position: relative;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #444;
     font-weight: bold;
-  }
-  nav ul li a::before {
+}
+
+nav ul li a::before {
     display: block;
     content: '';
     width: 0%;
@@ -56,42 +64,37 @@ nav ul li a {
     top:0;
     position: absolute;
     transition: width 0.2s;
-  }
-  
-  nav ul li a:hover::before {
+}
+
+nav ul li a:hover::before {
     width: 100%;
-  }
-  img{
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.contenido img{
     width: 350px;
     height: 350px;
-    float: left;
-    padding: 20px;
-    display: grid;
-}
-a.descargar{
-    
-    top: 380px;
-    right: 360px;
-    margin-top: auto;
-    text-decoration: none;
 }
 
-div.Calendarios{
+.contenido > div{
     display: grid;
-}
-div.ToDoList{
-    display: grid;
+    padding-bottom: 30px;
 }
 
-div.Habittraker{
-    display: grid;
-
-}
-div.Semanales{
-    display: grid;
+.contenido > div > p,
+.contenido > div > ul{
+   max-width: 350px;
 }
 
-div.Escolares{
-    display: grid;
-
+.flex_row{
+    display: flex;
 }
+.boton{
+    border-radius: 25px;
+}
+
